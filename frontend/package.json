@@ -2,7 +2,7 @@
   "name": "mark-music-ui",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://thomasb40466.github.io/Music_Recommendation",
+  "homepage": "https://thomasb40466.github.io/Music_Recommendation_Frontend/",
   "dependencies": {
     "@tsparticles/engine": "^3.8.1",
     "@tsparticles/react": "^3.0.0",
@@ -19,8 +19,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",          
-    "deploy":    "gh-pages -d build"       
+    "predeploy": "npm run build",
+    "deploy":    "gh-pages -d build --add"   
   },
   "eslintConfig": {
     "extends": "react-app"
