@@ -1,0 +1,85 @@
+/* ───────────────── Search bar container ───────────────── */
+.searchbar {
+    width: min(800px, 100%);      /* stretch to header width, max 800 */
+    margin: 1rem auto 0;
+    position: relative;
+  }
+  
+  /* ───────────────── Autosuggest core ──────────────────── */
+  .react-autosuggest__input {
+    width: 100%;
+    padding: 6px 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+  }
+  
+  .react-autosuggest__suggestions-container {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #2e3137fa;
+    z-index: 100;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    max-height: 1000%;
+    overflow-y: auto;
+  }
+  
+  .suggestion-item {
+    padding: 8px 12px;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  .react-autosuggest__suggestion--highlighted {
+    background: #dddddd2f;
+  }
+
+  .sugg-title   { font-weight: 500; }          /* song name */
+  .sugg-artists { font-size: 0.85rem; opacity: 0.8; }  /* artist line */
+
+  
+  /* ───────────────── Recommendation grid ───────────────── */
+  .recs-wrapper {
+    display: grid;
+    gap: 0.75rem;
+    margin: 1.5rem auto 0  ;   /* keep these */
+    width: 95%;
+    grid-template-columns: repeat(3, 1fr);   
+    grid-auto-rows: 1fr;                     
+  }
+    @media (min-width: 900px) {
+        .recs-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+        }
+    }
+  
+  /* ───────────────── Recommendation card ───────────────── */
+  .recs-card-link {          
+    display: block;
+    height: 100%;            
+    text-decoration: none;
+    color: rgba(234, 233, 233, 0.844);
+  }
+  .recs-card-link:hover .recs-card {
+    background: rgba(50, 30, 30, 0.18);
+  }
+  
+  .recs-card {               
+    display: flex;           
+    flex-direction: column;
+    justify-content: center; 
+    height: 80%;            
+    padding: 10px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  }
+  
+  .recs-title   { font: 600 1.05rem/1.3 sans-serif; margin-bottom: 0.35rem; }
+  .recs-artists { font-size: 0.9rem; opacity: 0.85; }
+  

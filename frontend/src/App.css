@@ -1,0 +1,52 @@
+/* ───────────────── Root & particle canvas ───────────────── */
+html, body, #root, .App {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#tsparticles {
+  position: fixed;
+  inset: 0;                  /* top:0 left:0 right:0 bottom:0 */
+  z-index: -1;               /* behind everything */
+}
+
+/* ───────────────── General app ───────────────── */
+.App { text-align: center; }
+
+@keyframes App-logo-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ───────────────── Fixed header (title + search bar) ────── */
+.App-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 100;
+}
+
+/* push page content below the fixed header (≈140 px) */
+body { padding-top: 20px; }
+
+.App-text h1 {
+  margin: 0 0 0.25rem;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.App-text h2 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #fff;
+}
+
+/* place the search bar; width is handled in SearchBar.css */
+.Search-container { width: 100%; display: flex; justify-content: center; }
+
